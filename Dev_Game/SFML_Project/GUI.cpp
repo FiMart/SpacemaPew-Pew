@@ -90,10 +90,10 @@ void GUI::updatetype(int type)
 void GUI::currentType()
 {
 	std::stringstream s1;
-	s1 << "X " << this->check[0];
+	s1 << "= " << this->check[0];
 	this->num[0].setString(s1.str());
 	std::stringstream s2;
-	s2 << "X " << this->check[1];
+	s2 << "= " << this->check[1];
 	this->num[1].setString(s2.str());
 }
 

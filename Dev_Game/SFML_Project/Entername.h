@@ -34,6 +34,8 @@ private:
 	sf::Sprite shapeSprite;
 	float totalTime;
 	float switchTime;
+	float Enternameslow;
+	bool EnternameslowTime = true;
 	sf::Vector2u imageCount;
 	sf::Vector2u imageCountPlay;
 	sf::Vector2u currentImage;
@@ -44,7 +46,10 @@ public:
 	sf::IntRect uvRect;
 	sf::IntRect uvRectPlayer;
 
-	inline std::string getPlayerName() { return this->playerName; }
+	inline std::string getPlayerName() 
+	{ 
+		return this->playerName; 
+	}
 	void enterName(std::vector<sf::Event> events);
 	void Animation(float deltatime);
 	/*void getDeltatime(float deltatime);*/

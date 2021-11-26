@@ -9,7 +9,7 @@ void Player::initStatus()
 		this->hp = this->hpMax;
 		this->gameReset = 0;
 	}
-	this->damage = 100;
+	this->damage = 50;
 	this->hpMax = 500;
 	this->hp = this->hpMax;
 	this->movementSpeed = 5.f;
@@ -36,7 +36,7 @@ void Player::initPlayer()
 
 	this->sahaTexture.loadFromFile("Texture/Shield.png");
 	this->sahaSprite.setTexture(this->sahaTexture);
-	this->sahaSprite.setScale(0.6f, 0.6f);
+	this->sahaSprite.setScale(0.6f, 0.7f);
 
 	this->playerColTexture.loadFromFile("Texture/combat.png");
 	this->playerColSprite.setTexture(this->playerColTexture);

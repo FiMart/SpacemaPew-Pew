@@ -18,32 +18,32 @@ void Game::innitMainMenu()
 	this->menuSound.setLoop(true);
 	this->font.loadFromFile("Font/retrogaming.ttf");
 	this->me.setFont(this->font);
-	this->me.setCharacterSize(30);
+	this->me.setCharacterSize(20);
 	this->me.setFillColor(sf::Color::White);
 	this->me.setString("64010315 Thanathon Tangon");
-	this->me.setPosition(0, 728);
+	this->me.setPosition(0, 740);
 	this->menu = new mainMenu();
-	this->Newgame = new Botton(533, 300, 300, 50, &font, "PLAY", 40,
+	this->Newgame = new Botton(533, 300, 300, 50, &font, "Play Game", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
-	this->HighScore = new Botton(533, 400, 300, 50, &font, "HIGH SCORE", 40,
+	this->HighScore = new Botton(533, 400, 300, 50, &font, "High Score", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
-	this->Exit = new Botton(533, 500, 300, 50, &font, "EXIT", 40,
+	this->Exit = new Botton(533, 500, 300, 50, &font, "Quit", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
 }
 
 void Game::initHighScore()
 {
 	this->highscore = new Highscore();
-	this->Back = new Botton(25, 25, 150, 50, &font, "BACK", 40,
+	this->Back = new Botton(25, 25, 150, 50, &font, "Back", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
 }
 
 void Game::initEnterName()
 {
 	this->enterName = new Entername();
-	this->BackInput = new Botton(25, 25, 150, 50, &font, "BACK", 40,
+	this->BackInput = new Botton(25, 25, 150, 50, &font, "Back", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
-	this->Play = new Botton((this->window->getSize().x / 2) - 150, 250, 300, 50, &font, "LET PLAY!", 40,
+	this->Play = new Botton((this->window->getSize().x / 2) - 150, 250, 300, 50, &font, "Play!", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
 	this->exEnemy[0].loadFromFile("Texture/moveEnemy1.png");
 	this->exEnemy[1].loadFromFile("Texture/moveEnemy2.png");
@@ -54,20 +54,20 @@ void Game::initGamePause()
 	this->gamePause.setFont(this->font);
 	this->gamePause.setCharacterSize(60);
 	this->gamePause.setFillColor(sf::Color::White);
-	this->gamePause.setString("GAME PAUSE");
+	this->gamePause.setString("Game Pause");
 	this->gamePause.setPosition((this->window->getSize().x / 2) - (this->gamePause.getGlobalBounds().width / 2) + 50, 200);
-	this->Continuous = new Botton(533, 300, 400, 50, &font, "CONTINUE", 40,
+	this->Continuous = new Botton(533, 300, 400, 50, &font, "Continue", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
-	this->ExitGamePause = new Botton(533, 400, 400, 50, &font, "EXIT GAME", 40,
+	this->ExitGamePause = new Botton(533, 400, 400, 50, &font, "Quit Game", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
 }
 
 void Game::initGameOver()
 {
 	this->gameOver = new GameOver();
-	this->GoToHighScore = new Botton(533, 500, 300, 50, &font, "HIGH SCORE", 40,
+	this->GoToHighScore = new Botton(533, 500, 300, 50, &font, "High Score", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
-	this->ExtitGame = new Botton(533, 575, 300, 50, &font, "EXIT GAME", 40,
+	this->ExtitGame = new Botton(533, 575, 300, 50, &font, "Quit Game", 40,
 		sf::Color(1, 1, 1, 255), sf::Color(1, 1, 1, 122), sf::Color(1, 1, 1, 0));
 	this->gui->num[0].setPosition((this->window->getSize().x / 2) + 60, 290);
 	this->gui->num[0].setCharacterSize(50);
@@ -326,7 +326,7 @@ void Game::updateInput()
 		this->hitSound.play();
 		this->bullets.push_back(new Bullet(this->bulletTexture["BULLET"],
 			this->player->getPos().x + this->player->getBounds().width / 2,
-			this->player->getPos().y + this->player->getBounds().height / 2,
+			this->player->getPos().y + this->player->getBounds().height / 2 -90.f,
 			4.f, 0.f, 6.f));
 	}
 }
@@ -637,7 +637,7 @@ void Game::render()
 	{
 		enemy->render(this->window);
 	}
-	//buullet
+	//bullet
 	for (auto* bullet : this->bullets)
 	{
 		bullet->render(this->window);

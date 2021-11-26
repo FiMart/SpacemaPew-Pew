@@ -45,11 +45,26 @@ public:
 	sf::IntRect uvRect;
 
 	const sf::FloatRect getBounds() const;
-	inline sf::Vector2f getPos() { return this->enemy.getPosition(); }
-	inline int currentHP() { return this->hp; }
-	inline int Point() { return this->points; }
-	inline int Dmg() { return this->dmg; }
-	inline int getType() { return this->type; }
+	inline sf::Vector2f getPos() 
+	{ 
+		return this->enemy.getPosition();
+	}
+	inline int currentHP() 
+	{ 
+		return this->hp; 
+	}
+	inline int Point() 
+	{ 
+		return this->points; 
+	}
+	inline int Dmg() 
+	{ 
+		return this->dmg; 
+	}
+	inline int getType() 
+	{ 
+		return this->type; 
+	}
 
 	void updateEnemy(sf::Vector2f playerPos);
 	void loseHp(int var);

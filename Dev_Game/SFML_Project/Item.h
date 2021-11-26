@@ -25,7 +25,10 @@ public:
 	Item(sf::Texture* texture, float PosX, float PosY, float scale, int type);
 	virtual ~Item();
 
-	inline int itemType() { return this->type; }
+	inline int itemType() 
+	{ 
+		return this->type; 
+	}
 	const sf::FloatRect getBounds() const;
 	const bool deleteItem();
 

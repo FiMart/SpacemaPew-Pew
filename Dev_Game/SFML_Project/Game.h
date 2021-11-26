@@ -36,7 +36,8 @@ private:
 	float deltaTime;
 	int State;
 	bool gameStop;
-
+	
+	
 	//mainmenu
 	mainMenu* menu;
 	sf::Text me;

@@ -83,10 +83,22 @@ public:
 	void getDmg();
 	void getFireRate();
 	const bool canAttack();
-	inline int getHpMax() { return this->hpMax; }
-	inline int getHp() { return this->hp; }
-	inline bool getSaha() { return this->sahaBool; }
-	inline sf::Vector2f getCenter() { return sf::Vector2f(this->playerSprite.getGlobalBounds().left + (this->playerSprite.getGlobalBounds().width / 2), this->playerSprite.getGlobalBounds().top + (this->playerSprite.getGlobalBounds().height / 2)); }
+	inline int getHpMax() 
+	{ 
+		return this->hpMax; 
+	}
+	inline int getHp() 
+	{ 
+		return this->hp; 
+	}
+	inline bool getSaha() 
+	{ 
+		return this->sahaBool; 
+	}
+	inline sf::Vector2f getCenter() 
+	{ 
+		return sf::Vector2f(this->playerSprite.getGlobalBounds().left + (this->playerSprite.getGlobalBounds().width / 2), this->playerSprite.getGlobalBounds().top + (this->playerSprite.getGlobalBounds().height / 2)); 
+	}
 
 	void updateAttack();
 	void updatePlayer();

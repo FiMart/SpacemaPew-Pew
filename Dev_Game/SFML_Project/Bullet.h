@@ -25,7 +25,10 @@ public:
 	virtual ~Bullet();
 
 	const sf::FloatRect getBounds() const;
-	inline sf::Vector2f getPos() { return this->bullet.getPosition(); }
+	inline sf::Vector2f getPos() 
+	{ 
+		return this->bullet.getPosition(); 
+	}
 
 	void updateBullet();
 	void render(sf::RenderTarget* target);

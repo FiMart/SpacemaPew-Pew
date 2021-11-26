@@ -33,9 +33,18 @@ public:
 	virtual ~GUI();
 	bool gameReset;
 	sf::Text num[2];
-	inline int getScore() { return this->score; }
-	inline int getCheck1() { return this->check[0]; }
-	inline int getCheck2() { return this->check[1]; }
+	inline int getScore() 
+	{ 
+		return this->score; 
+	}
+	inline int getCheck1() 
+	{
+		return this->check[0]; 
+	}
+	inline int getCheck2() 
+	{ 
+		return this->check[1]; 
+	}
 	void updatPlayerHpBar(float percent);
 	void updatePoint(int points);
 	void currentPoint();

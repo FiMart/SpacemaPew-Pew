@@ -13,7 +13,7 @@ void GameOver::initText()
 	this->GameOverText.setFont(this->font);
 	this->GameOverText.setCharacterSize(60);
 	this->GameOverText.setFillColor(sf::Color::Red);
-	this->GameOverText.setString("GAME OVER!");
+	this->GameOverText.setString("Game Over!");
 	this->GameOverText.setPosition((this->windowX / 2) - (this->GameOverText.getGlobalBounds().width / 2), 100);
 
 	this->enemyTex[0].loadFromFile("Texture/enemy1.png");
@@ -45,7 +45,7 @@ void GameOver::getScore(unsigned int score)
 	this->yourScore.setCharacterSize(40);
 	this->yourScore.setFillColor(sf::Color::Red);
 	std::stringstream ss;
-	ss << "YOUR SCORE : " << this->finalScore;
+	ss << "Your Score : " << this->finalScore;
 	this->yourScore.setString(ss.str());
 	this->yourScore.setPosition((1366 / 2) - (this->yourScore.getGlobalBounds().width / 2), 200);
 }

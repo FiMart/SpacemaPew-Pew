@@ -16,7 +16,7 @@ Entername::Entername()
 
 	this->playerTexture.loadFromFile("Texture/movespaceman2.png");
 	this->playerSprite.setTexture(this->playerTexture);
-	this->playerSprite.setScale(0.5f, 0.5f);
+	this->playerSprite.setScale(0.4f, 0.4f);
 	this->playerSprite.setPosition(sf::Vector2f(650, 500));
 
 	this->enemyTexture[0].loadFromFile("Texture/moveEnemy1.png");
@@ -53,9 +53,22 @@ void Entername::enterName(std::vector<sf::Event> events)
 			{
 				this->playerName.erase(playerName.length() - 1);
 			}
-			else if (events[i].text.unicode < 128 && playerName.length() < 5 && events[i].text.unicode != 8)
+			else if (events[i].text.unicode < 128 && playerName.length() < 4 && events[i].text.unicode != 8)
 			{
-				this->playerName += static_cast<char>(events[i].text.unicode);
+				if (EnternameslowTime == true)
+				{
+					this->playerName += static_cast<char>(events[i].text.unicode);
+					EnternameslowTime == false;
+				}
+				else
+				{
+					Enternameslow += 0.1;
+					if (Enternameslow >= 0.5f)
+					{
+						Enternameslow = 0;
+						Enternameslow = true;
+					}
+				}
 			}
 			this->player.setString(playerName);
 			this->player.setOrigin(this->player.getLocalBounds().width / 2, this->player.getLocalBounds().height / 2);
