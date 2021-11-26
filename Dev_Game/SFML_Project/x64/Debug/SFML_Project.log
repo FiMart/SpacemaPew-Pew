@@ -1,28 +1,4 @@
-﻿  Entername.cpp
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Entername.cpp(35,51): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Entername.cpp(36,52): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Entername.cpp(37,55): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Entername.cpp(38,56): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-  GUI.cpp
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\GUI.cpp(44,40): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\GUI.cpp(45,40): warning C4305: 'argument': truncation from 'double' to 'float'
-  Game.cpp
+﻿  Game.cpp
 D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Game.cpp(46,58): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
@@ -43,22 +19,4 @@ D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Game.cpp(450,92):
           [
               T=unsigned int
           ]
-  GameOver.cpp
-  Highscore.cpp
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Highscore.cpp(28,113): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Highscore.cpp(30,41): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Highscore.cpp(32,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Player.cpp
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Player.cpp(89,38): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-D:\Programming Fundamental\Game_Proposal\Dev_Game\SFML_Project\Player.cpp(90,39): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-  mainMenu.cpp
-  Generating Code...
   SFML_Project.vcxproj -> D:\Programming Fundamental\Game_Proposal\Dev_Game\x64\Debug\SFML_Project.exe
